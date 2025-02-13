@@ -12,20 +12,20 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <div class="container">
+  <body class="bg-light">
+    <div class="container mt-5">
       <h1>Number Guessing Game</h1>
       <div id="app">
         <p>
-          Enter your guess from 1 to 100:
-          <input type="number" v-model="guess" />
+          <label for="guess" class="form-label fs-5">Enter your guess from 1 to 100:</label>
+          <input type="number" id="guess" v-model="guess"  class="form-control form-control-lg" />
         </p>
         <p>
-          <button v-on:click="checkGuess()">Check Guess</button>&nbsp;
-          <button v-on:click="giveUp()">Give Up</button>&nbsp;
-          <button v-on:click="startOver()">Start Over</button>
+          <button class="btn btn-info btn-lg px-4" v-on:click="checkGuess()">Check Guess</button>&nbsp;
+          <button class="btn btn-info btn-lg px-4" v-on:click="giveUp()">Give Up</button>&nbsp;
+          <button class="btn btn-info btn-lg px-4" v-on:click="startOver()">Start Over</button>
         </p>
-        <p>{{msg}}</p>
+        <p v-if="msg" class="alert alert-info text-center fs-5 fw-bold mt-3">{{msg}}</p>
       </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

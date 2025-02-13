@@ -11,7 +11,7 @@ Vue.createApp({
         return Math.floor(Math.random() * 100) + 1;
       },
       checkGuess: function () {
-        if (this.guess == this.secret) {
+        if (this.guess === this.secret) {
           this.msg = "You got it!";
         } else if (this.guess > this.secret) {
           this.msg = "Guess lower.";
